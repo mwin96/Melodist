@@ -1,0 +1,28 @@
+{
+  "name": "mel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify-fs": "^1.0.0",
+    "express": "^4.17.1",
+    "midi-writer-js": "^1.7.4",
+    "midicube": "^0.6.1",
+    "node-vexflow": "^0.1.2",
+    "react-vexflow": "0.0.4",
+    "requirejs": "^2.3.6",
+    "uniq": "^1.0.1",
+    "vexflow": "^3.0.9"
+  },
+  "devDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}

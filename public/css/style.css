@@ -1,0 +1,59 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#title{
+  color: #ffffff ;
+  /* display: none */
+  
+}
+.brand-logo{
+  left:5%
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #64b5f6 ;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: #64b5f6 ;
+}
+input[type=range]::-ms-thumb {
+  background-color: #64b5f6 ;
+}
+
+input[type=range] + .thumb {
+  background-color: #64b5f6 ;
+}
+
+ul.dropdown-content.select-dropdown li span {
+  color: #42a5f5;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #90caf9;
+}
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #1976d2;
+}
+.vexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+#clef{
+  height:178px;
+}

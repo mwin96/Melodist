@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>melodist - Melody Midi Generator</title>
+  <link rel="icon" type="image/png" href="assets/favicon.ico">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+          <a class="brand-logo">melodist</a>
+        </div>
+    </nav>
+        <!-- <div class="top blue lighten-1">
+          <h2 id="title">Melodist</h1>
+        </div> -->
+<div class = "container"> 
+    <br/>
+    <br/>
+    <div class = "white">
+    <div class = "row">
+        <div class="col s6">
+            <label>BPM: <span id="bpm_output"> </span> </label>
+            <p class="range-field">
+                <input class="" type="range" id="bpm_range" min="1"
+                    max="300" value = "130"/>
+            </p>
+        </div>
+    </div>
+    <div class="s12">
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <select id = 'keyValue'>
+                    <option value="" disabled selected>Select a Key</option>
+                    <option value="1">C</option>
+                    <option value="2">C#</option>
+                    <option value="3">D</option>
+                    <option value="4">D#</option>
+                    <option value="5">E</option>
+                    <option value="6">F</option>
+                    <option value="7">F#</option>
+                    <option value="8">G</option>
+                    <option value="9">G#</option>
+                    <option value="10">A</option>
+                    <option value="11">A#</option>
+                    <option value="12">B</option>
+
+
+
+                </select>
+                <label>Key</label>
+            </div>
+            <div class="input-field col s12 m6" >
+                <select id = 'scaleSelect'>
+                    <option value="" disabled selected>Select a Scale</option>
+                    <option value="1">Major</option>
+                    <option value="2">Pentatonic Major</option>
+                    <option value="3">Natural Minor</option>
+                    <option value="4">Harmonic Minor</option>
+
+                </select>
+                <label>Scale</label>
+            </div>
+        </div>
+    </div>
+
+  
+        <div class="row">
+            <div class="col s2">
+                <label class="center-align">Quarter Notes</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input id="quarterOn" type="checkbox">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+            <div class="col s2">
+                <label>Eighth Notes</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input id="eighthOn" type="checkbox">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+            <div class="col s2">
+                <label>Sixteenth Notes</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input id="sixteenthOn" checked type="checkbox">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </br>
+        <div class="row">
+            <div class="col s6">
+                <label>Measures:  <span id="measure_output"> </label>
+                <p class="range-field">
+                    <input class="" type="range" id="measure_range"  min="2"
+                           max="28" value = "2" step ="2" />
+                </p>
+            </div>
+        </div>
+
+
+    <br/>
+    <div class="row">
+            <button onclick="play()" class="waves-effect waves-light btn blue"><i class="material-icons left">play_arrow</i>Play
+            </button>
+            <button onclick="stop()" class="waves-effect waves-light btn blue"> <i class="material-icons left">stop</i>Stop
+            </button>
+            <button onclick="randomize()" class="waves-effect waves-light btn blue accent-3"> <i class="material-icons left">album</i>Randomize
+            </button>
+            <a href = "#" id = "midiHref"> <button class="waves-effect waves-light btn blue darken-3"><i class="material-icons left">input</i>Export
+            </button>
+            </a>
+    </div>
+
+    <div class="vexbox">
+        <div id="clef"></div>
+      </div>    
+    </div>
+</div>
+
+  <!--  Scripts-->
+     <!-- midi.js --->
+    <script src="js/shim/Base64.js" type="text/javascript"></script>
+    <script src="js/shim/Base64binary.js" type="text/javascript"></script>
+    <script src="js/shim/WebAudioAPI.js" type="text/javascript"></script>
+    <script src="js/midi/audioDetect.js" type="text/javascript"></script>
+    <script src="js/midi/gm.js" type="text/javascript"></script>
+    <script src="js/midi/loader.js" type="text/javascript"></script>
+    <script src="js/midi/plugin.audiotag.js" type="text/javascript"></script>
+    <script src="js/midi/plugin.webaudio.js" type="text/javascript"></script>
+    <script src="js/midi/plugin.webmidi.js" type="text/javascript"></script>
+    <script src="js/util/dom_request_xhr.js" type="text/javascript"></script>
+    <script src="js/util/dom_request_script.js" type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://unpkg.com/vexflow/releases/vexflow-min.js"> </script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/bundle.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
